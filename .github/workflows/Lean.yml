@@ -95,6 +95,7 @@ jobs:
         CONFIG_FILE: '${{matrix.target}}.config'
       run: |
         [ -e $CONFIG_FILE ] && mv $CONFIG_FILE openwrt/.config
+        echo "CONFIG_PACKAGE_kmod-ixgbevf=y" >> openwrt/.config
         chmod +x ./customize.sh && ./customize.sh
         cd openwrt
         cp -f feeds/smpackage/.github/diy/default-settings package/lean/default-settings/files/zzz-default-settings
