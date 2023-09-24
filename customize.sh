@@ -2,7 +2,7 @@
 #===============================================
 #1. Modify default IP
 sed -i 's/192.168.1.1/192.168.1.252/g' openwrt/package/base-files/files/bin/config_generate
-echo "CONFIG_PACKAGE_kmod-ixgbevf=y" >> openwrt/.config
+#echo "CONFIG_PACKAGE_kmod-ixgbevf=y" >> openwrt/.config
 #2. Custom settings
 #sed -i 's?zstd$?zstd ucl upx\n$(curdir)/upx/compile := $(curdir)/ucl/compile?g' tools/Makefile
 #sed -i 's/$(TARGET_DIR)) install/$(TARGET_DIR)) install --force-overwrite/' package/Makefile
